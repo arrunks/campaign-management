@@ -2,10 +2,12 @@ import React from 'react';
 import MyContext from './MyContext';
 
 class MyProvider extends React.Component {
-    state = {
-      data:[{}]
-    };
-
+    constructor(props){
+      super(props);
+      this.state = {
+        data:props.data
+      };
+    }
 
     componentDidMount(){
       fetch('https://demo5019816.mockable.io/').then( response => response.json())
