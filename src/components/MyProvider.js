@@ -8,7 +8,7 @@ class MyProvider extends React.Component {
 
 
     componentDidMount(){
-      fetch('http://demo5019816.mockable.io/').then( response => response.json())
+      fetch('https://demo5019816.mockable.io/').then( response => response.json())
       .then( data => {
         this.setState({data:data.data})
       });
